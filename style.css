@@ -1,0 +1,233 @@
+*::before,
+*::after{
+    margin: 0%;
+    padding: 0%;
+ 
+}
+
+body{
+    width: 100vw;
+    height: 900px ;
+    display: flex;
+     flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    
+    background: linear-gradient(90deg, rgba(66, 243, 142, 1) 0%, rgba(0, 188, 212, 1) 43%, rgba(238, 130, 238, 0.48) 92%);
+}
+.container{
+
+    width:90% ;
+   max-width: 450px;
+
+   
+}
+
+h1{
+    opacity: 0.75;
+    font-size: 25px;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+.displayContainer{
+    width: 470px;
+    position: relative;
+  
+    border-bottom: 3px solid burlywood;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+    
+
+}
+.display{
+    width: 100%;
+    background-color: transparent;
+    font-size: 30px;
+    border-radius: 1rem;
+    padding:1.15rem 1rem ;
+   color:  rgb(78, 17, 17);
+   font-weight: 600;
+   font-size: 1.5rem;
+   line-height: 30px;
+   letter-spacing: 1px;
+   padding-right: 3.25rem;
+   border: none;
+   outline: none;
+}
+.display::placeholder{
+    position: absolute;
+    top: 50%;
+   left: 1.5rem;
+   font-size: 1.5rem;
+   line-height: 30px;
+   color:darkmagenta ;
+   opacity: 0.60;
+   text-transform: uppercase;
+   transform: translateY(-50%);
+}
+.displayContainer button{
+    position: absolute;
+    top: 50%;
+    right:1.5rem;
+    transform: translateY(-50%);
+
+}
+
+.inputContainer{
+    width: 100%;
+    background-color:rgb(161, 88, 229) ;
+    border-radius: 1rem;
+    padding:2rem ;
+    border-bottom: 0.35rem solid burlywood;
+
+}
+.lengthContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lengthContainer p:nth-child(1){
+    color: rgba(24, 24, 23, 0.906);
+    font-size: 1.5rem;
+}
+.lengthContainer p:nth-child(2){
+    color: rgb(19, 18, 17);
+    font-size: 1.5rem;
+}
+.strengthContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+.strengthContainer p{
+    color: rgb(19, 17, 13);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+.generateBtn{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: blueviolet;
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 0.35rem solid  burlywood;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: bisque; 
+    font-weight: 600;
+    font-size: 1.25rem;
+    outline: none;
+   border-left: 0;
+   border-right: 0;
+   border-top: 0;
+}
+.copybtn{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.datacopy{
+    position: absolute;
+    background-color: rgb(34, 3, 63);
+    color: aqua;
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition:  all 250ms ease-in-out;
+    
+}
+.datacopy.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+    font-size: large;
+
+}
+.checkbox input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid cyan; 
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+
+}
+.checkbox input:checked{
+    background-color: aqua;
+}
+.checkbox input:checked::before{
+
+content: '✔';
+position: absolute;
+color: rgb(4, 44, 44);
+font-size: 1.05rem; 
+font-weight: 600;
+left: 50%;
+top: -3.5px;
+transform: translateX(-50%);
+transform: translateY(5%);
+}
+
+.checkbox lable{
+    color: bisque;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+
+}
+
+.slider{
+    appearance:none;
+    width: 100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color: rgba(61, 5, 87, 0.74);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    background-image : linear-gradient(rgb(135, 40, 40));;
+
+}
+
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: rgb(40, 36, 9);
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 01.05rem);
+
+
+}
+.slider:focus{
+    outline: 3px solid rgb(206, 206, 13);
+}
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid  rgb(206, 206, 13);
+    background-color: rgb(20, 1, 20);
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.80);
+   
+} 
